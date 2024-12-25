@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SightEase 導盲 App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-page" class="page active">
+        <h1>SightEase 導盲 App</h1>
+        <p>您的智慧出行助手</p>
+        <button onclick="navigateTo('menu-page')">開始使用</button>
+    </div>
+
+    <div id="menu-page" class="page">
+        <h2>主選單</h2>
+        <button onclick="navigateTo('signal-page')">智慧信號燈辨識</button>
+        <button onclick="navigateTo('obstacle-page')">障礙物檢測</button>
+        <button onclick="navigateTo('navigation-page')">智慧路徑導航</button>
+        <button onclick="navigateTo('settings-page')">設定</button>
+    </div>
+
+    <div id="signal-page" class="page">
+        <h2>智慧信號燈辨識</h2>
+        <p>辨識中...</p>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    <div id="obstacle-page" class="page">
+        <h2>障礙物檢測</h2>
+        <p>掃描中...</p>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    <div id="navigation-page" class="page">
+        <h2>智慧路徑導航</h2>
+        <button onclick="speak('語音輸入目的地')">語音輸入目的地</button>
+        <p>前方直走 10 公尺，左轉。</p>
+        <button onclick="navigateTo('menu-page')">結束導航</button>
+    </div>
+
+ 
+    <div id="settings-page" class="page">
+        <h2>設定</h2>
+        <button onclick="speak('調整語音速度')">調整語音速度</button>
+        <button onclick="speak('震動強度設定')">震動強度設定</button>
+        <button onclick="speak('藍牙連接導盲杖')">藍牙連接導盲杖</button>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    <script>
+        function speak(text) {
+            const msg = new SpeechSynthesisUtterance(text);
+            msg.lang = "zh-TW"; 
+            window.speechSynthesis.speak(msg);
+        }
+
+        function navigateTo(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+
+            
+            switch (pageId) {
+                case 'login-page':
+                    speak("歡迎來到 SightEase，您的智慧出行助手。");
+                    break;
+                case 'menu-page':
+                    speak("主選單，選擇您的功能。");
+                    break;
+                case 'signal-page':
+                    speak("正在辨識信號燈，請稍候。");
+                    break;
+                case 'obstacle-page':
+                    speak("正在掃描障礙物，請稍候。");
+                    break;
+                case 'navigation-page':
+                    speak("您可以語音輸入目的地或查看導航指示。");
+                    break;
+                case 'settings-page':
+                    speak("在設定頁面，您可以調整語音速度和震動強度。");
+                    break;
+                default:
+                    speak("未知頁面。");
+                    break;
+            }
+        }
+
+        window.onload = function() {
+            speak("請選擇功能，開始使用 SightEase App。");
+        };
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SightEase 導盲 App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="login-page" class="page active">
+        <h1>SightEase 導盲 App</h1>
+        <p>您的智慧出行助手</p>
+        <button onclick="navigateTo('menu-page')">開始使用</button>
+    </div>
+
+   
+    <div id="menu-page" class="page">
+        <h2>主選單</h2>
+        <button onclick="navigateTo('signal-page')">智慧信號燈辨識</button>
+        <button onclick="navigateTo('obstacle-page')">障礙物檢測</button>
+        <button onclick="navigateTo('navigation-page')">智慧路徑導航</button>
+        <button onclick="navigateTo('settings-page')">設定</button>
+    </div>
+
+    
+    <div id="signal-page" class="page">
+        <h2>智慧信號燈辨識</h2>
+        <p>辨識中...</p>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    
+    <div id="obstacle-page" class="page">
+        <h2>障礙物檢測</h2>
+        <p>掃描中...</p>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    
+    <div id="navigation-page" class="page">
+        <h2>智慧路徑導航</h2>
+        <button>語音輸入目的地</button>
+        <p>前方直走 10 公尺，左轉。</p>
+        <button onclick="navigateTo('menu-page')">結束導航</button>
+    </div>
+
+
+    <div id="settings-page" class="page">
+        <h2>設定</h2>
+        <button>調整語音速度</button>
+        <button>震動強度設定</button>
+        <button>藍牙連接導盲杖</button>
+        <button onclick="navigateTo('menu-page')">返回主選單</button>
+    </div>
+
+    <script>
+        
+        function speak(text) {
+            const msg = new SpeechSynthesisUtterance(text);
+            msg.lang = "zh-TW"; 
+            window.speechSynthesis.speak(msg);
+        }
+
+        
+        function navigateTo(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+
+            
+            switch (pageId) {
+                case 'login-page':
+                    speak("歡迎來到 SightEase，您的智慧出行助手。");
+                    break;
+                case 'menu-page':
+                    speak("主選單，選擇您的功能。");
+                    break;
+                case 'signal-page':
+                    speak("正在辨識信號燈，請稍候。");
+                    break;
+                case 'obstacle-page':
+                    speak("正在掃描障礙物，請稍候。");
+                    break;
+                case 'navigation-page':
+                    speak("您可以語音輸入目的地或查看導航指示。");
+                    break;
+                case 'settings-page':
+                    speak("在設定頁面，您可以調整語音速度和震動強度。");
+                    break;
+                default:
+                    speak("未知頁面。");
+                    break;
+            }
+        }
+        window.onload = function() {
+            speak("請選擇功能，開始使用 SightEase App。");
+        };
+    </script>
+</body>
+</html>

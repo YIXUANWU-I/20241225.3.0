@@ -1,0 +1,145 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e0f071; 
+    color: #333; 
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    width: 100%;
+    max-width: 390px; 
+    box-sizing: border-box;
+}
+
+.page.active {
+    display: block;
+}
+
+#menu-page {
+    background-color: #ffffff; 
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #734eaf71;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 80%;
+    margin: 15px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#menu-page button:nth-child(1) {
+    background-color: #FFB6C1; 
+}
+
+#menu-page button:nth-child(2) {
+    background-color: #FFD54F;
+}
+
+#menu-page button:nth-child(3) {
+    background-color: #B2FF66; 
+}
+
+#menu-page button:nth-child(4) {
+    background-color: #81D4FA; 
+}
+
+#signal-page button {
+    background-color: #FFB6C1; 
+}
+
+#obstacle-page button {
+    background-color: #B2FF66; 
+}
+
+#navigation-page button {
+    background-color: #FFD54F; 
+}
+
+#settings-page button {
+    background-color: #81D4FA; 
+}
+
+button:hover {
+    background-color: #734eaf71; 
+    transform: scale(1.1);
+}
+
+
+button:active {
+    background-color: #F48FB1;
+}
+
+
+h1, h2 {
+    color: #abd2f2; 
+}
+
+#settings-page {
+    background-color: #ffffff; 
+}
+
+#settings-page button:hover {
+    background-color: #f8afc7; 
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #607D8B;
+}
+
+h1, h2 {
+    font-size: 32px;
+}
+
+button {
+    font-size: 26px;
+}
+
+.page {
+    padding: 30px;
+}
+
+
+button {
+    height: 70px;
+    width: 85%;
+}
+
+
+#signal-page p, #obstacle-page p, #navigation-page p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
